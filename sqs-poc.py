@@ -6,7 +6,8 @@ queue_name = "crem-mel-sqs-poc"
 
 # create the test queue
 # for a FIFO queue, the name must end in .fifo, and you must pass FifoQueue = True
-client.create_queue(QueueName=queue_name)
+# client.create_queue(QueueName=queue_name)
+
 # get a list of queues, we get back a dict with 'QueueUrls' as a key with a list of queue URLs
 queues = client.list_queues(QueueNamePrefix=queue_name) # we filter to narrow down the list
 test_queue_url = queues['QueueUrls'][0]
